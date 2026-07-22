@@ -1,63 +1,54 @@
 # Decision Tree
+A simple Python implementation of a decision tree for data science tasks
 
-A basic decision tree implementation in Python for data science tasks.
+## Installation
 
-## What & Why
-
-This project provides a simple decision tree implementation using Python. It's designed for data science tasks, such as classification and regression. The goal is to create a clear, easy-to-understand framework for decision tree creation and evaluation.
-
-## Install
-
-1. Clone the repository using `git clone https://github.com/samyalder/decision-tree.git`
-2. Install the dependencies using `pip install -r requirements.txt`
-3. Run the tests using `python -m unittest discover -s tests`
-
+To get started, you'll need Python 3.8+ and the `numpy` library. You can install the latter using pip:
+```bash
+pip install numpy
+```
+Now you can install the `decision-tree` package from source using pip:
+```bash
+pip install .
+```
 ## Usage
 
-Create a decision tree using the `DecisionTree` class in `src/tree.py`. Pass in your data and target variable to create a tree. You can then use the `evaluate` method to evaluate the tree's performance on a test dataset.
-
+The `decision_tree` module exports a `DecisionTree` class that you can use to train and evaluate your decision trees. Here's an example:
 ```python
-from src.tree import DecisionTree
+from decision_tree import DecisionTree
 
 # Create a decision tree
-tree = DecisionTree(X, y)
+tree = DecisionTree()
 
-# Evaluate the tree's performance on a test dataset
-accuracy = tree.evaluate(X_test, y_test)
-print(f"Accuracy: {accuracy:.2f}")
+# Train the tree on some data
+tree.fit(X, y)
+
+# Evaluate the tree on some test data
+accuracy = tree.score(X_test, y_test)
+print(accuracy)
 ```
-
 ## Build from Source
 
-1. Clone the repository using `git clone https://github.com/samyalder/decision-tree.git`
-2. Install the dependencies using `pip install -r requirements.txt`
-3. Run the tests using `python -m unittest discover -s tests`
-
+If you want to build the project from source, simply run the following commands:
+```bash
+git clone https://github.com/SamyAlderson/decision-tree.git
+cd decision-tree
+pip install .
+```
 ## Project Structure
 
-```bash
-.
-├── README.md
-├── setup.py
-├── pyproject.toml
-├── .gitignore
-├── src
-│   ├── main.py
-│   ├── utils.py
-│   ├── tree.py
-│   └── __init__.py
-├── tests
-│   ├── test_tree.py
-│   ├── test_utils.py
-│   └── __init__.py
-└── requirements.txt
-```
+* `decision_tree.py`: The main module that exports the `DecisionTree` class
+* `tests.py`: A test suite that covers the `DecisionTree` class
+* `utils.py`: A utility module that contains some helper functions
+* `data`: A directory that contains some example data
+* `requirements.txt`: A file that lists the project's dependencies
 
 ## License
 
-This project is licensed under the MIT License.
+Copyright (c) 2026 SamyAlderson
 
-## Dependencies
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-* `numpy`
-* `pandas`
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
