@@ -1,15 +1,34 @@
-__pycache__/
-*.pyc
-.pytest_cache/
-.env
-*.egg-info/
-dist/
+.gitignore
+
+# Ignore IDE project files
+.vscode/
+.pyenv/
+.pycache/
+
+# Ignore build and installation artifacts
 build/
+dist/
+*.egg-info
+*.egg
+
+# Ignore testing artifacts
+tests/.pytest_cache/
+tests/*.egg-info
+
+# Ignore local dependencies and data
 .venv/
-node_modules/
-target/
-bin/
-obj/
-*.o
-*.so
-*.dylib/
+venv/
+data/
+
+# Ignore IDE-generated code files
+*.pyc
+*.pyo
+*.opt
+
+# Ignore compiled Python files
+__.pycache__/
+
+# Ignore generated files by numpy and pandas
+*.npy
+*.npz
+*.pickle
