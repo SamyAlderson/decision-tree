@@ -1,15 +1,19 @@
 # .gitignore
-# ignore some common files and directories
-.git
-*.pyc
-*.log
-*.tmp
-node_modules/
-dist/
-
-# ignore some specific files
-*.env
-*.env.example
-# ignore some specific directories
+# ignore ruff cache
+.cache/ruff
+# ignore ruff log
+.cache/ruff.log
+# ignore venv
 venv/
-coverage/
+# ignore node_modules
+node_modules/
+# ignore build artifacts
+build/
+# ignore IDE files
+.idea/
+# ignore VSCode files
+.vscode/
+# ignore pyc files
+*.pyc
+# ignore __pycache__
+__pycache__/
