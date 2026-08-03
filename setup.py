@@ -1,10 +1,12 @@
 from setuptools import setup, find_packages
 
 try:
-    with open('README.md', 'r') as f:
+    with open('README.md', 'r', encoding='utf-8') as f:
         long_description = f.read()
 except FileNotFoundError:
     print("Warning: README.md not found. Skipping long description.")
+except Exception as e:
+    print(f"Error reading README.md: {e}")
 
 setup(
     name='decision-tree',
@@ -26,4 +28,5 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
     ],
+    python_requires='>=3.9',
 )
