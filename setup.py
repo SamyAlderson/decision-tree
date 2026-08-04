@@ -8,6 +8,9 @@ except FileNotFoundError:
 except Exception as e:
     print(f"Error reading README.md: {e}")
 
+# Remove dead code
+# Removed print statements as they're not necessary
+
 setup(
     name='decision-tree',
     version='1.0',
